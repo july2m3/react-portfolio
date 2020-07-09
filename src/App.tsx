@@ -23,7 +23,7 @@ const App: React.FC = () => {
             I am an aspiring full stack{' '}
             <span className="important">javascript developer </span>
             in Milwaukee Wisconsin . I am always on the lookout for new
-            opportunities to learn and grow. Don't be a strainger{' '}
+            opportunities to learn and grow. Don't be a stranger{' '}
             <span role="img" aria-label="content">
               😊
             </span>

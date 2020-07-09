@@ -28,13 +28,18 @@ body {
 
   .navigation {
     ul {
-      height: 4rem;
+      min-height: 4rem;
       width: 100%;
       list-style-type: none;
-      display: flex;
-      position: sticky;
-      justify-content: center;
+      // display: flex;
+      // position: sticky;
+      // justify-content: center;
       align-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      text-align: center;
+      // grid-template-columns: repeat();
+
       background-color: var(--navigation-bg-color);
       color: var(--navigation-font-color);
       li {
