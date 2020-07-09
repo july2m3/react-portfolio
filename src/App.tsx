@@ -5,36 +5,39 @@ import me from './pic.jpg';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <main className="container">
+    <>
+      <nav className="navigation">
+        <ul>
+          <li>Top</li>
+          <li>Resume</li>
+          <li>Portolio</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <header className="header">
         <div className="info">
-          <h1>Julio Fuentes</h1>
-          <h2>Full Stack Dev</h2>
+          <h1>
+            Hi, I'm: <span className="important">Julio Fuentes</span>
+          </h1>
+          <p>
+            I am an aspiring full stack{' '}
+            <span className="important">javascript developer </span>
+            in Milwaukee Wisconsin . I am always on the lookout for new
+            opportunities to learn and grow. Don't be a strainger{' '}
+            <span role="img" aria-label="content">
+              😊
+            </span>
+          </p>
+          <button type="button" className="contact-button">
+            Hit me up!
+          </button>
         </div>
+
         <div className="image">
           <img src={me} alt="me" />
         </div>
-        <div className="social">
-          <ul className="links">
-            <li>
-              <span role="img" aria-label="happy">
-                😬
-              </span>
-            </li>
-            <li>
-              <span role="img" aria-label="happy">
-                😬
-              </span>
-            </li>
-            <li>
-              <span role="img" aria-label="happy">
-                😬
-              </span>
-            </li>
-          </ul>
-        </div>
-      </main>
-    </div>
+      </header>
+    </>
   );
 };
 

@@ -1,57 +1,98 @@
 html {
   min-height: 100vh;
 }
+
+body {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --font-color: #333;
+  --navigation-bg-color: rgba(10, 10, 10, 1);
+  --navigation-font-color: rgba(240, 240, 240, 1);
+  --container-bg: rgba(22, 22, 22, 0.7);
+}
+
 #root {
   background-image: linear-gradient(
-    to bottom right,
+    to right,
     rgb(0, 89, 255),
     rgb(0, 255, 255)
   );
 
-  .App {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+  .navigation {
+    ul {
+      height: 4rem;
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      position: sticky;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--navigation-bg-color);
+      color: var(--navigation-font-color);
+      li {
+        margin: 0px 10px 0px 10px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .header {
+    background-color: var(--container-bg);
+    width: 100%;
+    padding-top: 4rem;
+    height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
     align-items: center;
 
-    .container {
-      border: 1px solid black;
-      height: 400px;
-      width: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .image {
+      grid-column: 2 / span 3;
+      grid-row: 2 / span 3;
+      clip-path: circle();
+      img {
+        width: 150%;
+        transform: translateX(-120px);
+        height: auto;
+        background-position: right;
+      }
+    }
 
-      .info {
+    .info {
+      height: 100%;
+      width: 100%;
+      color: white;
+      grid-column: 6 / span 5;
+      grid-row: 2 / span 3;
+      // border: 1px solid black;
+      opacity: 0.8;
+
+      h1 {
+        font-size: 3rem;
+      }
+      .important {
+        font-weight: bolder;
+        color: white;
+      }
+      p {
+        margin-top: 32px;
+        line-height: 2rem;
+        font-size: 1.5rem;
+      }
+      .contact-button {
+        margin-top: 32px;
+        font-size: 1.5rem;
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 0.5rem;
         text-align: center;
-        h1 {
-          font-size: 2 rem;
-        }
-        h2 {
-          font-size: 1.5rem;
-        }
-      }
-      .image {
-        clip-path: circle();
-        margin: 40px;
-        img {
-          width: 80%;
-        }
-      }
-      .social {
-        .links {
-          display: flex;
-          list-style-type: none;
-          display: flex;
-          // justify-content: center;
-          justify-content: space-evenly;
-        }
       }
     }
   }
