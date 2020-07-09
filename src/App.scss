@@ -1,0 +1,58 @@
+html {
+  min-height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 89, 255),
+    rgb(0, 255, 255)
+  );
+
+  .App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      border: 1px solid black;
+      height: 400px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .info {
+        text-align: center;
+        h1 {
+          font-size: 2 rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+      .image {
+        clip-path: circle();
+        margin: 40px;
+        img {
+          width: 80%;
+        }
+      }
+      .social {
+        .links {
+          display: flex;
+          list-style-type: none;
+          display: flex;
+          // justify-content: center;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+}
