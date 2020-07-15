@@ -6,7 +6,7 @@ function Nav() {
       <ul>
         <li>Top</li>
         <li>Resume</li>
-        <li>Portolio</li>
+        <li>Portfolio</li>
         <li>Contact</li>
       </ul>
     </nav>

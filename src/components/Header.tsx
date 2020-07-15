@@ -25,7 +25,9 @@ function Header() {
         </div>
 
         <div className="scroll-cue">
-          <i className="fas fa-chevron-down"></i>
+          <a href="#portfolio">
+            <i className="fas fa-chevron-down"></i>
+          </a>
         </div>
 
         <div className="image">

@@ -6,7 +6,7 @@ const Main = () => {
   }, []);
 
   return (
-    <main className="portfolio">
+    <main className="portfolio" id="portfolio">
       <h1>main content baby</h1>
     </main>
   );

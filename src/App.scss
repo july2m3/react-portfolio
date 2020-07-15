@@ -1,5 +1,6 @@
 html {
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -69,6 +70,10 @@ body {
       opacity: 0.3;
       text-align: center;
       animation: 3s heartbeat infinite linear;
+      a,
+      a:visited {
+        color: white;
+      }
     }
 
     @keyframes heartbeat {
