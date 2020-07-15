@@ -1,6 +1,6 @@
 import React from "react";
 
-import me from "../pic.jpg";
+import me from "./pic.jpg";
 
 function Header() {
   return (
@@ -24,8 +24,13 @@ function Header() {
           </button>
         </div>
 
+        <div className="scroll-cue">
+          <i className="fas fa-chevron-down"></i>
+        </div>
+
         <div className="image">
-          <img src={me} alt="me" />
+          {" "}
+          <img src={me} alt="me" />{" "}
         </div>
       </header>
     </div>
