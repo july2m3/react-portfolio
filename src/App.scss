@@ -136,10 +136,61 @@ body {
   }
 
   .portfolio {
-    height: 90vh;
+    padding-top: 5rem;
+    min-height: 90vh;
+    width: 100%;
+    color: white;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li.portfolio-item {
+        list-style: none;
+        border: 1px solid black;
+        width: 300px;
+        min-height: 300px;
+        margin: 20px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .title {
+          text-align: center;
+        }
+        .description {
+          margin: 1rem;
+          text-indent: 1rem;
+        }
+
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .homepage,
+        .code {
+          border: 1px solid black;
+          padding: 1rem 1.5rem;
+          display: inline;
+          margin: 0.5rem;
+
+          background-color: rgba(0, 89, 255, 0.2);
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
 
   footer {
+    margin-top: 1rem;
     height: 10vh;
     text-align: center;
     color: #333;
