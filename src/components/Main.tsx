@@ -5,11 +5,7 @@ const Main = () => {
     console.log("here");
   }, []);
 
-  return (
-    <main className="portfolio" id="portfolio">
-      <h1>main content baby</h1>
-    </main>
-  );
+  return <main className="portfolio" id="portfolio"></main>;
 };
 
 export default Main;

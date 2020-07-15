@@ -21,6 +21,7 @@ body {
 }
 
 #root {
+  position: relative;
   background-image: linear-gradient(
     to right,
     rgb(0, 89, 255),
@@ -28,19 +29,18 @@ body {
   );
 
   .navigation {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+
     ul {
-      min-height: 4rem;
+      height: 4rem;
       width: 100%;
       list-style-type: none;
-      // display: flex;
-      // position: sticky;
-      // justify-content: center;
       align-items: center;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       text-align: center;
-      // grid-template-columns: repeat();
-
       background-color: var(--navigation-bg-color);
       color: var(--navigation-font-color);
       li {
@@ -54,7 +54,7 @@ body {
     background-color: var(--container-bg);
     width: 100%;
     padding-top: 4rem;
-    height: calc(100vh - 4rem);
+    height: 100vh;
     display: grid;
     position: relative;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -135,12 +135,13 @@ body {
     }
   }
 
-  main {
+  .portfolio {
     height: 90vh;
   }
 
   footer {
     height: 10vh;
     text-align: center;
+    color: #333;
   }
 }

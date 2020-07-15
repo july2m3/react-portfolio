@@ -3,10 +3,12 @@ import "./App.scss";
 
 import Nav from "./components/Nav";
 import Header from "./components/Header";
-import Main from "./components/Main";
+// import Main from "./components/Main";
+import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
+  const [repos, updateRepos] = React.useState([{}]);
   React.useEffect(() => {
     const getData = async () => {
       const githubResponse = await fetch(
@@ -15,14 +17,39 @@ const App: React.FC = () => {
       const repos = await githubResponse.json();
       console.log(repos);
     };
-    getData();
+
+    // getData();
+    const exampleRepos = [
+      {
+        name: "yo",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
+      },
+      {
+        name: "yo",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
+      },
+      {
+        name: "yo",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
+      },
+      {
+        name: "yo",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
+      },
+    ];
+    updateRepos(exampleRepos);
   }, []);
 
   return (
     <>
       <Nav />
       <Header />
-      <Main />
+      {/* <Main/> */}
+      <Portfolio portfolioItems={repos} />
       <Footer />
     </>
   );
