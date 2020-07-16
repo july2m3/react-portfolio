@@ -6,6 +6,11 @@ function Header() {
   return (
     <div>
       <header className="header">
+        <div className="image">
+          {" "}
+          <img src={me} alt="me" />{" "}
+        </div>
+
         <div className="info">
           <h1>
             Hi, I'm: <span className="important">Julio Fuentes</span>
@@ -28,11 +33,6 @@ function Header() {
           <a href="#portfolio">
             <i className="fas fa-chevron-down"></i>
           </a>
-        </div>
-
-        <div className="image">
-          {" "}
-          <img src={me} alt="me" />{" "}
         </div>
       </header>
     </div>
