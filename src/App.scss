@@ -24,11 +24,19 @@ body {
 #root {
   position: relative;
   width: 100%;
-  background-image: linear-gradient(
-    to right,
-    rgb(0, 89, 255),
-    rgb(0, 255, 255)
-  );
+  background: #feac5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4bc0c8,
+    #c779d0,
+    #feac5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom right,
+    #4bc0c8,
+    #c779d0,
+    #feac5e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   .navigation {
     position: fixed;
@@ -43,7 +51,18 @@ body {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       text-align: center;
-      background-color: var(--navigation-bg-color);
+      background: #000000; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to left,
+        #434343,
+        #000000
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to left,
+        #434343,
+        #000000
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       color: var(--navigation-font-color);
       li {
         margin: 0px 10px 0px 10px;
@@ -53,14 +72,11 @@ body {
   }
 
   .header {
-    background-color: var(--container-bg);
     width: 100%;
-
-    padding-top: 4rem;
     height: 100vh;
+    padding-top: 4rem;
     position: relative;
     display: flex;
-    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
@@ -194,10 +210,8 @@ body {
   }
 
   .contact {
-    margin-top: 100px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid black;
-    width: 90%;
+    padding: 100px;
+    width: 100%;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -248,10 +262,21 @@ body {
   }
 
   footer {
-    margin-top: 1rem;
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #434343,
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #434343,
+      #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     height: 10vh;
     text-align: center;
-    color: #333;
+    color: #fff;
   }
 }
 
