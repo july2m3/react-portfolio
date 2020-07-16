@@ -4,6 +4,7 @@ import "./App.scss";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
@@ -19,29 +20,6 @@ const App: React.FC = () => {
     };
 
     getData();
-    // const exampleRepos = [
-    //   {
-    //     name: "yo",
-    //     description:
-    //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
-    //   },
-    //   {
-    //     name: "yo",
-    //     description:
-    //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
-    //   },
-    //   {
-    //     name: "yo",
-    //     description:
-    //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
-    //   },
-    //   {
-    //     name: "yo",
-    //     description:
-    //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit fugiat porro similique laudantium illum nemo nisi, soluta vel ratione! Suscipit, non? Quo, obcaecati delectus unde illo provident atque earum!",
-    //   },
-    // ];
-    // // updateRepos(exampleRepos);
   }, []);
 
   return (
@@ -49,6 +27,7 @@ const App: React.FC = () => {
       <Nav />
       <Header />
       <Portfolio portfolioItems={repos} />
+      <Contact />
       <Footer />
     </>
   );

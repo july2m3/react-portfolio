@@ -5,6 +5,7 @@ html {
 
 body {
   height: 100%;
+  width: 100%;
 }
 
 * {
@@ -22,6 +23,7 @@ body {
 
 #root {
   position: relative;
+  width: 100%;
   background-image: linear-gradient(
     to right,
     rgb(0, 89, 255),
@@ -34,7 +36,7 @@ body {
     width: 100%;
 
     ul {
-      height: 4rem;
+      min-height: 4rem;
       width: 100%;
       list-style-type: none;
       align-items: center;
@@ -52,7 +54,9 @@ body {
 
   .header {
     background-color: var(--container-bg);
+    border: 5px solid pink;
     width: 100%;
+
     padding-top: 4rem;
     height: 100vh;
     display: grid;
@@ -189,10 +193,81 @@ body {
     }
   }
 
+  .contact {
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    select {
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      background-color: var(--bg-color);
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    form button {
+      width: 40%;
+      background-color: #333;
+      font-size: 1.2rem;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    ul li {
+      display: inline;
+      margin: 20px;
+      font-size: 2rem;
+    }
+  }
+
   footer {
     margin-top: 1rem;
     height: 10vh;
     text-align: center;
     color: #333;
+  }
+}
+
+@media (max-width: 800px) {
+  #root {
+    .navigation {
+      width: 100%;
+      overflow: hidden;
+      ul {
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 1fr 1fr;
+        border: 1px solid white;
+      }
+    }
+    footer {
+      width: 100%;
+    }
   }
 }
