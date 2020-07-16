@@ -251,13 +251,19 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #root {
     .header {
       flex-wrap: wrap;
 
       .info {
         text-align: center;
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
       }
       .image {
         clip-path: circle(40%);
