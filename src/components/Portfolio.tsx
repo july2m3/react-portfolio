@@ -13,11 +13,17 @@ const Portfolio = (props: any) => {
       <div className="links">
         {item.homepage && (
           <p className="homepage">
-            <a href={item.homepage}>View Site</a>
+            <a href={item.homepage}>
+              <i className="fab fa-firefox-browser" />
+            </a>
           </p>
         )}
+
+        {/* <p className="last-updated">{item.updated_at}</p> */}
         <p className="code">
-          <a href={item.html_url}>See code</a>
+          <a href={item.html_url}>
+            <i className="fab fa-github" />
+          </a>
         </p>
       </div>
     </li>

@@ -151,6 +151,9 @@ body {
         list-style: none;
         width: 300px;
         min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         margin: 20px;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.2);
@@ -164,8 +167,9 @@ body {
         }
 
         .links {
+          justify-self: flex-end;
           display: flex;
-          flex-wrap: wrap;
+          // flex-wrap: wrap;
         }
 
         .homepage,
