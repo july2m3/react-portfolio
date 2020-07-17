@@ -15,8 +15,12 @@ const App: React.FC = () => {
         "https://api.github.com/users/july2m3/repos",
       );
       const repos = await githubResponse.json();
-      updateRepos(repos);
+      const sortedRepos = repos.sort((a: any, b: any) => {
+        return a.updated_at > b.updated_at ? -1 : 1;
+      });
+      updateRepos(sortedRepos);
       console.log(repos);
+      console.log(sortedRepos);
     };
 
     getData();
