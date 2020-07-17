@@ -5,7 +5,7 @@ import me from "./pic.jpg";
 function Header() {
   return (
     <div>
-      <header className="header">
+      <header className="header" id="header">
         <div className="image">
           {" "}
           <img src={me} alt="me" />{" "}

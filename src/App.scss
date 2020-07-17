@@ -65,6 +65,15 @@ body {
       ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
       color: var(--navigation-font-color);
+
+      a {
+        color: var(--navigation-font-color);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
       li {
         margin: 0px 10px 0px 10px;
         font-size: 1.5rem;

@@ -4,10 +4,20 @@ function Nav() {
   return (
     <nav className="navigation">
       <ul>
-        <li>Home</li>
-        <li>Resume</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li>
+          <a href="#header">Home</a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/document/d/1wNUELDJT3cnT8ZcbMKjAT5eYwflslrx9ZfXofKFCp54/edit?usp=sharing">
+            Resume
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   );
