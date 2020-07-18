@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
     <footer>
-      made with{" "}
-      <span role="img" aria-label="heart">
-        ♥️
-      </span>{" "}
-      by me
+      {'Handmade with'}
+      <i className="fas fa-heart heart-icon" />
+      {'by me.'}
     </footer>
   );
 };
