@@ -31,8 +31,8 @@ const Portfolio = (props: any) => {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
-      <h3>Public projects. Sorted by newest to oldest.</h3>
+      <h1>Latest Projects</h1>
+      <h3>Sorted by newest to oldest.</h3>
       <ul>{portfolio}</ul>
     </div>
   );
