@@ -6,11 +6,6 @@ function Header() {
   return (
     <div>
       <header className="header" id="header">
-        <div className="image">
-          {" "}
-          <img src={me} alt="me" />{" "}
-        </div>
-
         <div className="info">
           <h1>
             Hi, I'm: <span className="important">Julio Fuentes</span>
@@ -27,6 +22,11 @@ function Header() {
           <button type="button" className="contact-button">
             Hit me up!
           </button>
+        </div>
+
+        <div className="image">
+          {" "}
+          <img src={me} alt="me" />{" "}
         </div>
 
         <div className="scroll-cue">

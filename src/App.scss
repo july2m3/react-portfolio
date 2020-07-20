@@ -43,27 +43,29 @@ body {
     position: fixed;
     z-index: 1;
     width: 100%;
+    background: #000000; /* fallback for old browsers */
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(
+      to left,
+      #434343,
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #434343,
+      #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     ul {
+      width: 80%;
       min-height: 4rem;
-      width: 100%;
       list-style-type: none;
       align-items: center;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      text-align: center;
-      background: #000000; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to left,
-        #434343,
-        #000000
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to left,
-        #434343,
-        #000000
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.5rem;
       color: var(--navigation-font-color);
 
       a {
@@ -73,16 +75,12 @@ body {
       a:hover {
         text-decoration: underline;
       }
-
-      li {
-        margin: 0px 10px 0px 10px;
-        font-size: 1.5rem;
-      }
     }
   }
 
   .header {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     height: 100vh;
     padding-top: 4rem;
     position: relative;
@@ -124,10 +122,15 @@ body {
     .image {
       clip-path: circle();
 
+      display: flex;
+      justify-content: flex-end;
+      transform: translateX(20%);
+
       img {
         max-width: 100%;
-        transform: translateX(-120px);
-        height: auto;
+        // width: 100%;
+        transform: translateX(-90px);
+        // height: auto;
         background-position: right;
       }
     }
@@ -165,7 +168,8 @@ body {
   .portfolio {
     padding-top: 5rem;
     min-height: 90vh;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     color: white;
 
     h1,
@@ -189,7 +193,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin: 20px;
+        // margin: 20px;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.2);
 
@@ -251,7 +255,7 @@ body {
       margin-bottom: 20px;
     }
 
-    input[type='text'],
+    input[type="text"],
     select {
       width: 60%;
       padding: 12px 20px;
@@ -322,8 +326,7 @@ body {
       }
       .image {
         clip-path: circle(40%);
-        display: flex;
-        justify-content: center;
+        transform: translateX(0);
 
         img {
           transform: translateX(-40px);
