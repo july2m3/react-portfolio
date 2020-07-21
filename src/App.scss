@@ -160,12 +160,20 @@ body {
         line-height: 2rem;
         font-size: 1.5rem;
       }
-      .contact-button {
+      .contact-button a {
+        background-color: #fff;
+        text-decoration: none;
         margin-top: 32px;
         font-size: 1.5rem;
         padding: 1rem 2rem 1rem 2rem;
         border-radius: 0.5rem;
         text-align: center;
+        &:visited {
+          color: #333;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -258,7 +266,7 @@ body {
       margin-bottom: 20px;
     }
 
-    input[type='text'],
+    input[type="text"],
     select {
       width: 60%;
       padding: 12px 20px;
@@ -329,6 +337,7 @@ body {
           font-size: 2rem;
         }
         p {
+          margin-top: 10px;
           font-size: 1rem;
         }
       }
@@ -341,7 +350,7 @@ body {
         }
       }
 
-      button {
+      .contact-button {
         display: none;
       }
     }

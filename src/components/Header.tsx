@@ -19,9 +19,9 @@ function Header() {
               😊
             </span>
           </p>
-          <button type="button" className="contact-button">
-            Hit me up!
-          </button>
+          <p className="contact-button">
+            <a href="#contact">Hit me up!</a>
+          </p>
         </div>
 
         <div className="image">
