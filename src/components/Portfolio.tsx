@@ -11,6 +11,12 @@ const Portfolio = (props: any) => {
       <p className="description">{item.description}</p>
 
       <div className="links">
+        <p className="code">
+          <a href={item.html_url}>
+            <i className="fab fa-github" />
+          </a>
+        </p>
+
         {item.homepage && (
           <p className="homepage">
             <a href={item.homepage}>
@@ -20,11 +26,6 @@ const Portfolio = (props: any) => {
         )}
 
         {/* <p className="last-updated">{item.updated_at}</p> */}
-        <p className="code">
-          <a href={item.html_url}>
-            <i className="fab fa-github" />
-          </a>
-        </p>
       </div>
     </li>
   ));
