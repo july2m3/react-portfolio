@@ -7,6 +7,7 @@ body {
   min-height: 100%;
   width: 100%;
   line-height: 1.5;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 * {
@@ -272,7 +273,7 @@ body {
       margin-bottom: 20px;
     }
 
-    input[type="text"],
+    input[type='text'],
     select {
       width: 60%;
       padding: 12px 20px;
