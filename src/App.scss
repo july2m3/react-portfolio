@@ -45,8 +45,12 @@ body {
     z-index: 1;
     width: 100%;
     background: #000000; /* fallback for old browsers */
-    display: flex;
-    justify-content: center;
+    .dropdown {
+      display: flex;
+      justify-content: center;
+    }
+    font-size: 1.5rem;
+    color: var(--navigation-font-color);
 
     background: -webkit-linear-gradient(
       to left,
@@ -59,20 +63,17 @@ body {
       #000000
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    .menu {
+      display: none;
+    }
+
     ul {
       width: 80%;
       min-height: 4rem;
       list-style-type: none;
       align-items: center;
-
-      // display: flex;
-      // align-items: center;
-      // justify-content: space-between;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-      font-size: 1.5rem;
-      color: var(--navigation-font-color);
 
       a {
         color: var(--navigation-font-color);
@@ -93,6 +94,64 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .info {
+      height: 100%;
+      width: 100%;
+      color: white;
+      grid-column: 6 / span 5;
+      grid-row: 2 / span 3;
+      opacity: 0.8;
+
+      h1 {
+        font-size: 3rem;
+      }
+      .important {
+        font-weight: bolder;
+        color: white;
+      }
+      name {
+        transition: transform 300ms ease-in;
+
+        &:hover {
+          transform: translate(100px, 150px) rotate(30deg);
+        }
+      }
+      p {
+        margin-top: 32px;
+        line-height: 2rem;
+        font-size: 1.5rem;
+      }
+      .contact-button a {
+        background-color: #fff;
+        text-decoration: none;
+        margin-top: 32px;
+        font-size: 1.5rem;
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        &:visited {
+          color: #333;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .image {
+      clip-path: circle();
+      display: flex;
+      justify-content: flex-end;
+      transform: translateX(20%);
+
+      img {
+        max-width: 100%;
+        height: auto;
+        transform: translateX(-90px);
+        background-position: right;
+      }
+    }
 
     .scroll-cue {
       position: absolute;
@@ -122,59 +181,6 @@ body {
       100% {
         opacity: 0.4;
         transform: scale(0.6);
-      }
-    }
-
-    .image {
-      clip-path: circle();
-
-      display: flex;
-      justify-content: flex-end;
-      transform: translateX(20%);
-
-      img {
-        max-width: 100%;
-        // width: 100%;
-        transform: translateX(-90px);
-        // height: auto;
-        background-position: right;
-      }
-    }
-
-    .info {
-      // height: 100%;
-      width: 100%;
-      color: white;
-      grid-column: 6 / span 5;
-      grid-row: 2 / span 3;
-      opacity: 0.8;
-
-      h1 {
-        font-size: 3rem;
-      }
-      .important {
-        font-weight: bolder;
-        color: white;
-      }
-      p {
-        margin-top: 32px;
-        line-height: 2rem;
-        font-size: 1.5rem;
-      }
-      .contact-button a {
-        background-color: #fff;
-        text-decoration: none;
-        margin-top: 32px;
-        font-size: 1.5rem;
-        padding: 1rem 2rem 1rem 2rem;
-        border-radius: 0.5rem;
-        text-align: center;
-        &:visited {
-          color: #333;
-        }
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }
@@ -324,15 +330,35 @@ body {
 
 @media (max-width: 800px) {
   #root {
-    .navigation ul {
-      justify-items: center;
+    .navigation {
+      .dropdown {
+        flex-wrap: wrap;
+
+        .menu {
+          display: block;
+          padding: 1rem;
+
+          &:hover + ul {
+            display: inline;
+          }
+        }
+        ul {
+          display: none;
+          text-align: center;
+        }
+      }
+
+      ul {
+        justify-items: center;
+      }
     }
 
     .header {
       flex-wrap: wrap;
 
       .info {
-        padding-top: 1rem;
+        max-height: 50vh;
+        padding-top: 2rem;
         text-align: center;
         h2 {
           font-size: 2rem;
