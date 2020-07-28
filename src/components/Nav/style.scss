@@ -1,0 +1,60 @@
+.navigation {
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  $bg-color: #111;
+  $text-color: #bbb;
+  background-color: $bg-color;
+
+  a,
+  a:visited {
+    color: #bbb;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .dropdown {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $bg-color;
+    color: $text-color;
+
+    &:hover .dropdown-menu {
+      display: block;
+    }
+
+    .menu {
+      color: #bbb;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    .dropdown-menu {
+      width: 200px;
+      display: none;
+      position: absolute;
+      top: 50px;
+      background-color: #111;
+    }
+
+    li {
+      width: 100%;
+      margin: 10px;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
+
+import './style.scss';
 
 function Nav() {
   return (
     <nav className="navigation">
       <div className="dropdown">
         <span className="menu">Menu</span>
-        <ul>
+        <ul className="dropdown-menu">
           <li>
             <a href="#header">Home</a>
           </li>
