@@ -1,0 +1,25 @@
+header.hero {
+  svg {
+    // transition: all 1s linear;
+    #left-arm,
+    #right-arm {
+      transform-origin: 0% 0%;
+      transform-box: fill-box;
+      animation: coding 3s linear infinite;
+    }
+    #left-arm {
+      animation-delay: 1.5s;
+    }
+  }
+  @keyframes coding {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-100deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}

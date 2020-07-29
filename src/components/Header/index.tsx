@@ -1,6 +1,7 @@
 import React from 'react';
 
 import me from './pic.jpg';
+import { ReactComponent as Me } from './me.svg';
 
 function Header() {
   return (
@@ -18,14 +19,13 @@ function Header() {
             😊
           </span>
         </p>
-        <p className="contact-button">
-          <a href="#contact">Hit me up!</a>
-        </p>
       </div>
 
       <div className="image">
         {' '}
-        <img src={me} alt="me" />{' '}
+        {/* <img src={me} alt="me" />{' '} */}
+        {/* <svg src={Me} /> */}
+        <Me />
       </div>
 
       <div className="scroll-cue">

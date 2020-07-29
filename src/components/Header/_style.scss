@@ -2,19 +2,36 @@
   height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .info {
     flex: 2;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
+
+    .important {
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 
   .image {
     width: 100%;
+    margin-top: -1rem;
 
-    img {
-      width: 100%;
+    svg {
+      width: 80%;
+      z-index: 0;
       height: auto;
     }
   }
