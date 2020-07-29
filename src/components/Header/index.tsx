@@ -7,7 +7,8 @@ function Header() {
     <header className="hero" id="header">
       <div className="info">
         <h1>
-          Hi, I'm, <span className="important name">Julio Fuentes</span>
+          Hello! My name is,{" "}
+          <span className="important name">Julio Fuentes</span>
         </h1>
         <p>
           I am an aspiring full stack{" "}
