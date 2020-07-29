@@ -1,6 +1,5 @@
 import React from 'react';
 
-import me from './pic.jpg';
 import { ReactComponent as Me } from './me.svg';
 
 function Header() {
