@@ -1,0 +1,52 @@
+.portfolio {
+  width: 80%;
+  margin: 6rem auto 0 auto;
+  color: $portfolio-color;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  &-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    height: 20rem;
+    overflow: auto;
+    padding: 1rem;
+
+    .title {
+      text-align: center;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      p {
+        text-align: center;
+      }
+
+      a,
+      a:visited {
+        color: rgb(206, 24, 206);
+        &:nth-child(2) {
+          // color: rgb(245, 38, 23);
+          color: green;
+        }
+      }
+
+      i {
+        font-size: 2rem;
+      }
+    }
+  }
+}

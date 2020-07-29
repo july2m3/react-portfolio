@@ -1,5 +1,5 @@
-import React from "react";
-import { v4 as uuid } from "uuid";
+import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 const Portfolio = (props: any) => {
   const { portfolioItems } = props;
@@ -8,7 +8,6 @@ const Portfolio = (props: any) => {
   const portfolio = portfolioItems.map((item: any) => (
     <li className="portfolio-item" key={uuid()}>
       <h1 className="title">{item.name}</h1>
-      <p className="description">{item.description}</p>
 
       <div className="links">
         <p className="code">
@@ -24,9 +23,10 @@ const Portfolio = (props: any) => {
             </a>
           </p>
         )}
-
-        {/* <p className="last-updated">{item.updated_at}</p> */}
       </div>
+
+      <p className="description">{item.description}</p>
+      {/* <p className="last-updated">{item.updated_at}</p> */}
     </li>
   ));
 
