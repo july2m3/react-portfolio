@@ -36,3 +36,21 @@ header.hero {
     }
   }
 }
+
+footer {
+  .heart {
+    animation: bobUpandDown 1s linear infinite;
+  }
+
+  @keyframes bobUpandDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
