@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Contact = () => {
   return (
@@ -27,7 +27,9 @@ const Contact = () => {
           placeholder="message..."
           required
         />
-        <button type="submit">Send</button>
+        <div className="button-div">
+          <button type="submit">Send</button>
+        </div>
       </form>
     </div>
   );
