@@ -1,0 +1,16 @@
+.footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    text-align: center;
+    font-size: 1.4rem;
+
+    .heart {
+      color: rgb(199, 30, 30);
+      margin: 0.5rem;
+    }
+  }
+}

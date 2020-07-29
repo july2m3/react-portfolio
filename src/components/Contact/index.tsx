@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Contact = () => {
   return (
     <div className="item contact" id="contact">
-      <h2>Contact</h2>
+      <h1 className="contact__title">Contact</h1>
       <form name="contact" method="POST" data-netlify="true">
         <input
           type="text"
