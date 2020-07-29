@@ -20,8 +20,8 @@
     align-items: center;
     background-color: $bg-color;
     color: $text-color;
-
     position: relative;
+
     &:hover .dropdown-menu {
       display: block;
     }
@@ -41,10 +41,36 @@
     }
 
     li {
-      height: 5rem;
+      height: 4rem;
       width: 100%;
       text-align: center;
       font-size: 1.4rem;
+    }
+  }
+}
+
+// For Desktops!!
+@media (min-width: 700px) {
+  .navigation {
+    .dropdown {
+      .menu {
+        display: none;
+      }
+
+      &:hover .dropdown-menu {
+        display: flex;
+      }
+
+      .dropdown-menu {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          height: auto;
+        }
+      }
     }
   }
 }
