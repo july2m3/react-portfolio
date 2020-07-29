@@ -1,12 +1,12 @@
-import React from 'react';
-import { v4 as uuid } from 'uuid';
+import React from "react";
+import { v4 as uuid } from "uuid";
 
 const Portfolio = (props: any) => {
   const { portfolioItems } = props;
   console.log(portfolioItems);
 
   const portfolio = portfolioItems.map((item: any) => (
-    <li className="portfolio-item" key={uuid()}>
+    <li className="portfolio__item" key={uuid()}>
       <h1 className="title">{item.name}</h1>
 
       <div className="links">
@@ -34,7 +34,7 @@ const Portfolio = (props: any) => {
     <div className="portfolio" id="portfolio">
       <h1>Latest Projects</h1>
       <h3>Sorted by newest to oldest.</h3>
-      <ul>{portfolio}</ul>
+      <ul className="portfolio__items">{portfolio}</ul>
     </div>
   );
 };
