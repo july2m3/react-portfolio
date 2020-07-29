@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './style.scss';
 import me from './pic.jpg';
 
 function Header() {

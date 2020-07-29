@@ -6,7 +6,7 @@ import Portfolio from './components/Portfolio/';
 import Contact from './components/Contact/';
 import Footer from './components/Footer/';
 
-import './App.scss';
+import './main.scss';
 
 const App: React.FC = () => {
   const [repos, updateRepos] = React.useState([{}]);

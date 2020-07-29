@@ -1,12 +1,8 @@
 .navigation {
-  min-height: 50px;
+  top: 0;
+  position: fixed;
+  height: 50px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-
-  $bg-color: #111;
-  $text-color: #bbb;
   background-color: $bg-color;
 
   a,
@@ -15,18 +11,7 @@
     text-decoration: none;
   }
 
-  nav {
-    top: 0;
-    position: fixed;
-    height: 50px;
-    width: 100px;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  .dropdown {
+  &.dropdown {
     width: 100%;
     height: 50px;
     position: relative;
@@ -42,14 +27,13 @@
       display: block;
     }
 
-    .menu {
+    &.menu {
       color: #bbb;
       font-size: 1.4rem;
       text-align: center;
     }
 
-    .dropdown-menu {
-      // width: 200px;
+    &.dropdown-menu {
       width: 100%;
       display: none;
       position: absolute;

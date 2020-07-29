@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './style.scss';
-
 function Nav() {
   return (
     <nav className="navigation">
